@@ -24,8 +24,7 @@ export default {
             id: this.todosCount,
             name: this.todoName
         });
-        this.todosCount++;
-        this.$todos.$emit('all-todos', {todos: this.todos, todosCount: this.todosCount});
+        this.$todos.$emit('all-todos', {todos: this.todos, todosCount: ++this.todosCount});
       }else{
         this.ifEmpty = true;
       }
