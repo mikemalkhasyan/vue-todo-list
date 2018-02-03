@@ -20,8 +20,11 @@ export default {
     createTodo() {
       if(this.todoName !== ''){
         this.ifEmpty = false;
-        this.todos.push();
-
+        this.todos.push({
+            name: this.todoName
+        });
+        this.todosCount++;
+        this.$todos.$emit('all-todos', this.todos);
       }else{
         this.ifEmpty = true;
       }
