@@ -21,10 +21,11 @@ export default {
       if(this.todoName !== ''){
         this.ifEmpty = false;
         this.todos.push({
+            id: this.todosCount,
             name: this.todoName
         });
         this.todosCount++;
-        this.$todos.$emit('all-todos', this.todos);
+        this.$todos.$emit('all-todos', {todos: this.todos, todosCount: this.todosCount});
       }else{
         this.ifEmpty = true;
       }

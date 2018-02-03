@@ -3,7 +3,7 @@
         <div class="col-3 mt-2" v-if="todos !== null" v-for="todo in todos">
             <div class="card">
                 <div class="card-block">
-                    <h3 class="card-title">{{ todo.name }}</h3>
+                    <h3 class="card-title pt-2 pb-2">{{ todo.name }}</h3>
                     <div class="row mt-3">
                         <div class="col-4">
                             <button class="btn btn-primary"></button>
@@ -12,7 +12,7 @@
                             <button class="btn btn-warning"></button>
                         </div>
                         <div class="col-4">
-                            <button class="btn btn-danger"></button>
+                            <button class="btn btn-danger" @click="removeTodo(todo.id)"></button>
                         </div>
                     </div>
                 </div>
