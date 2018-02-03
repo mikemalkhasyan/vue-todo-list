@@ -20,7 +20,7 @@ export default {
   methods: {
     removeTodo(id){
       this.todos.pop(id);
-      this.todosCount--;
+      this.$todos.$emit('todos-count', --this.todosCount);
     }
   }
 }

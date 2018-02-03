@@ -14,7 +14,7 @@ export default {
 
   },
   mounted () {
-
+    this.$todos.$on('todos-count', (count) => this.todosCount = count);
   },
   methods: {
     createTodo() {
